@@ -1,0 +1,52 @@
+/* =============== HEADER ============= */
+header{
+    margin-top: -30px;
+    background-image: url("../../images/bg-header-desktop.png");
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0 20px;
+    .container{
+        text-align: center;
+        .logo{
+            margin-bottom: 40px;
+        }
+        .header__text{
+            h1{
+                margin-bottom: 10px;
+                word-spacing: 3px;
+            }
+            p{
+                color: $grayish-blue;
+                max-width: 610px;
+                margin: 0 auto ;
+            }
+            margin-bottom: 50px;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            a{
+                background-color: $dark-grayish-blue;
+                color: white;
+                padding: 15px 30px;
+                border-radius: 30px;
+                font-weight: 600;
+                &.btn-ios{
+                    background-color:$strong-cyan ;
+                    box-shadow: -5px 10px 15px -10px $strong-cyan;
+                    &:hover{
+                        background-color:hsl(171, 66%, 47%) ;
+                    }
+                }
+                &.btn-mac{
+                    background-color: $light-blue;
+                    box-shadow: -5px 10px 15px -10px $light-blue;
+                    &:hover{
+                        background-color:hsl(233, 93%, 71%) ;
+                    }
+                }
+            }
+        }
+}
+}
