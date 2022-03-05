@@ -1,0 +1,17 @@
+/* =============== PRATNERS ============ */
+.partners{
+    &__grid{
+        @include responsive-grid(20px,200px);
+        align-items: center;
+        justify-items: center;
+        img{
+            max-width: 150px;
+        }
+    }
+}
+/* To do:
+- increase gap for mobile screens.
+- modify the container 
+- add padding to the section
+- make imgs smaller for mobile screen
+*/

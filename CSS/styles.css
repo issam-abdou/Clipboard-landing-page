@@ -1,5 +1,6 @@
 /* =============== VARIABLES ============== */
 /*___COLORLS____*/
+/* ============== MIXINS ============= */
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
 * {
   margin: 0;
@@ -208,4 +209,28 @@ header .container .buttons a.btn-mac:hover {
   margin-top: 10px;
   line-height: 1.4;
 }
+
+/* =============== PRATNERS ============ */
+.partners__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+}
+
+.partners__grid img {
+  max-width: 150px;
+}
+
+/* To do:
+- increase gap for mobile screens.
+- modify the container 
+- add padding to the section
+- make imgs smaller for mobile screen
+*/
 /*# sourceMappingURL=styles.css.map */

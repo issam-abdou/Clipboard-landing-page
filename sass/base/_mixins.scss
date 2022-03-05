@@ -1,0 +1,8 @@
+/* ============== MIXINS ============= */
+
+// Responsive grid:
+@mixin responsive-grid($gap,$width) {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax($width,1fr));
+    gap: $gap;
+}
