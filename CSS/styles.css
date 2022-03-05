@@ -1,7 +1,45 @@
 /* =============== VARIABLES ============== */
 /*___COLORLS____*/
 /* ============== MIXINS ============= */
+/* =============== BUTTONS ============ */
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap");
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.buttons a {
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+.buttons a.btn-ios {
+  background-color: #26baa4;
+  -webkit-box-shadow: -5px 10px 15px -10px #26baa4;
+          box-shadow: -5px 10px 15px -10px #26baa4;
+}
+
+.buttons a.btn-ios:hover {
+  background-color: #29c7af;
+}
+
+.buttons a.btn-mac {
+  background-color: #6173ff;
+  -webkit-box-shadow: -5px 10px 15px -10px #6173ff;
+          box-shadow: -5px 10px 15px -10px #6173ff;
+}
+
+.buttons a.btn-mac:hover {
+  background-color: #7080fa;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -50,6 +88,10 @@ p {
   color: #9fabb2;
 }
 
+section {
+  padding: 60px 0;
+}
+
 /* =============== HEADER ============= */
 header {
   margin-top: -30px;
@@ -80,44 +122,6 @@ header .container .header__text p {
   color: #9fabb2;
   max-width: 610px;
   margin: 0 auto;
-}
-
-header .container .buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 20px;
-}
-
-header .container .buttons a {
-  background-color: #4c545d;
-  color: white;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-weight: 600;
-}
-
-header .container .buttons a.btn-ios {
-  background-color: #26baa4;
-  -webkit-box-shadow: -5px 10px 15px -10px #26baa4;
-          box-shadow: -5px 10px 15px -10px #26baa4;
-}
-
-header .container .buttons a.btn-ios:hover {
-  background-color: #29c7af;
-}
-
-header .container .buttons a.btn-mac {
-  background-color: #6173ff;
-  -webkit-box-shadow: -5px 10px 15px -10px #6173ff;
-          box-shadow: -5px 10px 15px -10px #6173ff;
-}
-
-header .container .buttons a.btn-mac:hover {
-  background-color: #7080fa;
 }
 
 /* ****** section-title *******/
@@ -232,5 +236,21 @@ header .container .buttons a.btn-mac:hover {
 - modify the container 
 - add padding to the section
 - make imgs smaller for mobile screen
+*/
+/*================ DOWNLOAD ============== */
+.download {
+  text-align: center;
+}
+
+.download .section-title {
+  background-color: yellow;
+}
+
+.download .buttons {
+  margin-top: 35px;
+}
+
+/*
+- make buttons responsive for mobile
 */
 /*# sourceMappingURL=styles.css.map */

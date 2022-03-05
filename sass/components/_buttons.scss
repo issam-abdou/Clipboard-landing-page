@@ -1,0 +1,27 @@
+/* =============== BUTTONS ============ */
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    a{
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        font-weight: 600;
+        &.btn-ios{
+            background-color:$strong-cyan ;
+            box-shadow: -5px 10px 15px -10px $strong-cyan;
+            &:hover{
+                background-color:hsl(171, 66%, 47%) ;
+            }
+        }
+        &.btn-mac{
+            background-color: $light-blue;
+            box-shadow: -5px 10px 15px -10px $light-blue;
+            &:hover{
+                background-color:hsl(233, 93%, 71%) ;
+            }
+        }
+    }
+}
