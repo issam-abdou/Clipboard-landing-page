@@ -170,4 +170,10 @@ header .container .buttons a.btn-mac:hover {
   color: #9fabb2;
   line-height: 1.6;
 }
+
+/* ================= CLIPBOARD ============== */
+.clipboard__img {
+  border: solid;
+  text-align: center;
+}
 /*# sourceMappingURL=styles.css.map */
