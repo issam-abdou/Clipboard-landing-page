@@ -1,0 +1,70 @@
+/* ============ FOOTER ============*/
+footer{
+    background-color: rgb(245,247,247);
+    padding: 30px 0;
+    position: relative;
+    .footer__content{
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 100px;
+        .footer__logo{
+            width: 53px;
+            align-self: top;
+            transform: translateY(-10px);
+            
+        }
+        .footer__links{
+            display: flex;
+            justify-content: flex-start;
+            gap: 70px;
+            padding-left: 50px;
+            li{
+                margin-bottom: 15px;
+                a{
+                    color: $dark-grayish-blue;
+                    font-size: 16px;
+                    font-weight: 500;
+                    transition: .3s ease;
+                    &:hover{
+                        color: $strong-cyan;
+                    }
+                }
+            }
+        }
+        .footer__socials{
+            justify-self: flex-end;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            a{
+                i{
+                    font-size: 20px;
+                    transition: .2s ease;
+                }
+                &:hover{
+                    i{
+                        color: $strong-cyan;
+                    }
+                }
+            }
+        }
+    }
+    .attribution{
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 5px;
+        a{
+            color: hsl(228, 45%, 44%);
+        }
+    }
+}
+
+/*
+- replace the socila icons using fontawesome
+- make it responsive for mobile and tablet
+- add hover for social icons
+*/
