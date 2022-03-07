@@ -40,6 +40,25 @@
   background-color: #7080fa;
 }
 
+@media screen and (max-width: 488px) {
+  .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .buttons a {
+    width: 206px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .buttons a {
+    width: 100%;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -51,6 +70,12 @@
 html {
   scroll-behavior: smooth;
   font-size: 18px;
+}
+
+@media screen and (max-width: 488px) {
+  html {
+    font-size: 15px;
+  }
 }
 
 ul {
@@ -88,8 +113,14 @@ p {
   color: #9fabb2;
 }
 
+@media screen and (max-width: 488px) {
+  p {
+    line-height: 1.6;
+  }
+}
+
 section {
-  padding: 60px 0;
+  padding: 80px 0;
 }
 
 h1, h2, h3 {
@@ -102,7 +133,7 @@ header {
   background-image: url("../../images/bg-header-desktop.png");
   background-position: center;
   background-size: cover;
-  padding: 100px 0 20px;
+  padding: 120px 0 20px;
 }
 
 header .container {
@@ -128,6 +159,15 @@ header .container .header__text p {
   margin: 0 auto;
 }
 
+@media screen and (max-width: 488px) {
+  header {
+    background-image: url("../../images/bg-header-mobile.png");
+  }
+  header .logo img {
+    width: 100px;
+  }
+}
+
 /* ****** section-title *******/
 .section-title {
   text-align: center;
@@ -150,16 +190,19 @@ header .container .header__text p {
   padding: 80px 0;
 }
 
-.features .f-container {
+.features .lg-container {
   max-width: 1800px;
   margin: auto;
+}
+
+.features .lg-container > p {
+  max-width: 700px;
 }
 
 .features__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border: solid;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -167,41 +210,109 @@ header .container .header__text p {
       -ms-flex-align: center;
           align-items: center;
   gap: 100px;
+  margin-top: 90px;
+}
+
+.features .features__img {
+  overflow: hidden;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
 }
 
 .features .features__img img {
-  max-width: 100%;
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
 }
 
-.features .feature {
+@media screen and (min-width: 1800px) {
+  .features .features__img img {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+.features .features__text {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.features .features__text .feature {
   margin-bottom: 30px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
 
-.features .feature h3 {
+.features .features__text .feature h3 {
   margin-bottom: 10px;
 }
 
-.features .feature p {
+.features .features__text .feature p {
   color: #9fabb2;
   line-height: 1.6;
+  max-width: 400px;
+}
+
+@media screen and (max-width: 1174px) {
+  .features .lg-container {
+    padding: 0 15px;
+    margin: auto;
+  }
+  .features__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 60px;
+  }
+  .features .features__img img {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .features .features__text {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
+  .features .features__text .feature {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .features .features__text .feature h3 {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .features .features__text .feature p {
+    color: #9fabb2;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+  }
 }
 
 /* ================= CLIPBOARD ============== */
 .clipboard__img {
-  border: solid;
+  margin-top: 110px;
   text-align: center;
 }
 
+@media screen and (max-width: 488px) {
+  .clipboard__img {
+    margin-top: 60px;
+  }
+}
+
 /* ============= WORKFLOW ========== */
+.workflow {
+  padding-top: 0px;
+}
+
 .workflow__content {
-  border: solid;
+  margin-top: 60px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(320px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 30px;
 }
 
@@ -211,11 +322,19 @@ header .container .header__text p {
 
 .workflow__content .card__img {
   height: 70px;
+  width: auto;
 }
 
 .workflow__content .card__text p {
   margin-top: 10px;
   line-height: 1.4;
+}
+
+@media screen and (max-width: 714px) {
+  .workflow .card p {
+    max-width: 400px;
+    margin: 10px auto;
+  }
 }
 
 /* =============== PRATNERS ============ */
@@ -225,6 +344,7 @@ header .container .header__text p {
   -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  row-gap: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -235,40 +355,32 @@ header .container .header__text p {
   max-width: 150px;
 }
 
-/* To do:
-- increase gap for mobile screens.
-- modify the container 
-- add padding to the section
-- make imgs smaller for mobile screen
-*/
 /*================ DOWNLOAD ============== */
 .download {
   text-align: center;
+  padding-bottom: 140px;
 }
 
 .download .buttons {
-  margin-top: 35px;
+  margin-top: 50px;
 }
 
-/*
-- make buttons responsive for mobile
-*/
 /* ============ FOOTER ============*/
 footer {
   background-color: #f5f7f7;
-  padding: 30px 0;
+  padding: 40px 0;
   position: relative;
 }
 
 footer .footer__content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 1fr auto;
-      grid-template-columns: auto 1fr auto;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 100px;
+  margin-bottom: 20px;
 }
 
 footer .footer__content .footer__logo {
@@ -278,9 +390,15 @@ footer .footer__content .footer__logo {
       align-self: top;
   -webkit-transform: translateY(-10px);
           transform: translateY(-10px);
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/span 2;
 }
 
 footer .footer__content .footer__links {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3/span 8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,7 +406,6 @@ footer .footer__content .footer__links {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 70px;
-  padding-left: 50px;
 }
 
 footer .footer__content .footer__links li {
@@ -308,6 +425,9 @@ footer .footer__content .footer__links li a:hover {
 }
 
 footer .footer__content .footer__socials {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-column: 11/span 2;
   justify-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -322,6 +442,7 @@ footer .footer__content .footer__socials a i {
   font-size: 20px;
   -webkit-transition: .2s ease;
   transition: .2s ease;
+  color: #4c545d;
 }
 
 footer .footer__content .footer__socials a:hover i {
@@ -342,9 +463,59 @@ footer .attribution a {
   color: #3e52a3;
 }
 
-/*
-- replace the socila icons using fontawesome
-- make it responsive for mobile and tablet
-- add hover for social icons
-*/
+@media screen and (max-width: 700px) {
+  footer .footer__content {
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    row-gap: 20px;
+  }
+  footer .footer__content .footer__links {
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 10;
+    grid-column: 3/span 10;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  footer .footer__content .footer__socials {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 5;
+    -ms-grid-column-span: 4;
+    grid-column: 5/span 4;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  footer .footer__content {
+    display: block;
+    text-align: center;
+  }
+  footer .footer__content .footer__logo {
+    margin: 0 auto 30px;
+  }
+  footer .footer__content .footer__logo img {
+    width: 60px;
+  }
+  footer .footer__content .footer__links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 15px auto;
+  }
+  footer .footer__content .footer__socials {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .attribution {
+    font-size: 9px;
+  }
+}
 /*# sourceMappingURL=styles.css.map */

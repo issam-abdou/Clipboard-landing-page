@@ -1,36 +1,79 @@
 /*============== FEATURES =========== */
 .features{
-    .f-container{
+    .lg-container{
         max-width: 1800px;
         margin: auto;
+        &>p{
+            max-width: 700px;
+        }
     }
     padding:80px 0;
+    
     &__content{
         display: flex;
-        border: solid;
         justify-content: space-between;
         align-items: center;
         gap: 100px;
+        margin-top: 90px;
     }
+    
     .features__img{
+        overflow: hidden;
+        flex-basis: 50%;
         img{
-            max-width: 100%;
+            transform: translateX(-50px);
+            @media screen and (min-width:1800px) {
+                transform: translateX(0);
+            }
         }
     }
-    .feature{
-        margin-bottom: 30px;
-        // border: solid;
-        // padding: 0 300px 10px 15px;
-        width: fit-content;
-        h3{
-            margin-bottom: 10px;
-        }
-        p{
-            color: $grayish-blue;
-            line-height: 1.6;
-            // padding-right: 100px;
-            // border: solid;
-            // font-size: 14px;
+    .features__text{
+        flex-basis: 50%;
+        .feature{
+            margin-bottom: 30px;
+            width: fit-content;
+            h3{
+                margin-bottom: 10px;
+            }
+            p{
+                color: $grayish-blue;
+                line-height: 1.6;
+                max-width: 400px;;
+            }
         }
     }
-}
+
+    @media screen and (max-width:"1174px") {
+        .lg-container{
+            padding: 0 15px;
+            margin: auto;
+        }
+        &__content{
+            flex-direction: column;
+            gap: 60px;
+        }
+        .features__img{
+            img{
+                transform: translateX(0);
+            }
+        }
+        .features__text{
+            flex-basis: 50%;
+            .feature{
+                margin-bottom: 30px;
+                width: 100%;
+                h3{
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+                p{
+                    color: $grayish-blue;
+                    line-height: 1.6;
+                    text-align: center;
+                    max-width:90%;
+                    margin: auto;
+                    
+            }
+        }
+    }
+}}

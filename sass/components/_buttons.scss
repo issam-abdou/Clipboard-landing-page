@@ -24,4 +24,16 @@
             }
         }
     }
+    @media screen and (max-width:488px) {
+        flex-direction: column;
+        a{
+            width: 206px;
+            margin: auto;
+        }
+    }
+    @media screen and (max-width:400px) {
+        a{
+            width: 100%;
+        }
+    }
 }

@@ -1,7 +1,13 @@
 /* ================= CLIPBOARD ============== */
 .clipboard{
     &__img{
-        border: solid;
+        margin-top: 110px;
         text-align: center;
+    }
+
+    @media screen and (max-width:488px) {
+        &__img{
+            margin-top: 60px;
+        }
     }
 }

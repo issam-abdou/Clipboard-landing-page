@@ -2,6 +2,7 @@
 .partners{
     &__grid{
         @include responsive-grid(20px,200px);
+        row-gap: 60px;
         align-items: center;
         justify-items: center;
         img{
@@ -9,9 +10,3 @@
         }
     }
 }
-/* To do:
-- increase gap for mobile screens.
-- modify the container 
-- add padding to the section
-- make imgs smaller for mobile screen
-*/
